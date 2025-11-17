@@ -1,0 +1,180 @@
+/* Basic theme & reset */
+:root{
+  --bg:#0b1220;
+  --card:#0f1724;
+  --muted:rgba(230,238,248,0.7);
+  --muted-2:rgba(230,238,248,0.6);
+  --accent:#60a5fa;
+  --text:#e6eef8;
+  --radius:10px;
+  --gap:18px;
+  --max-width:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:linear-gradient(180deg,#071025 0%, #071726 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:100vh;
+}
+
+/* Utilities */
+.small{font-size:13px}
+.fw-700{font-weight:700}
+.mt-10{margin-top:10px}
+.mt-18{margin-top:18px}
+.mt-22{margin-top:22px}
+.stack-8{display:flex;flex-direction:column;gap:8px}
+.muted-strong{color:rgba(230,238,248,0.8)}
+
+/* Skip Link */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;background:#111827;color:#fff;padding:8px 10px;border-radius:8px;z-index:1000}
+
+/* Layout container */
+main, header, footer, .hero { width:100%; max-width:var(--max-width) }
+
+/* Header */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:22px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.name{font-weight:700}
+.tagline{font-size:13px;color:var(--muted-2)}
+.logo{
+  width:48px;height:48px;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),#3b82f6);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-weight:700;color:#08203a;
+  box-shadow:0 4px 14px rgba(0,0,0,0.4);
+}
+header nav ul{display:flex;gap:12px;list-style:none}
+
+header nav a{
+  color:var(--accent);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+  transition:color .15s, background .15s;
+}
+header nav a:visited{ color:var(--accent) }
+header nav a:hover,
+header nav a:focus{
+  color:var(--accent);
+  background:rgba(96,165,250,0.08); 
+  outline:none;
+}
+
+/* Hero */
+.hero{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  margin-bottom:26px;
+}
+.hero > div{flex:1}
+.hero .right{width:260px;min-width:220px}
+
+/* Card */
+.card{
+  background:var(--card);
+  padding:14px;
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(2,6,23,0.6);
+  color:var(--muted);
+}
+
+/* CTA + buttons */
+.cta{display:flex;gap:10px;margin-top:12px}
+.btn{
+  display:inline-block;padding:8px 12px;border-radius:8px;
+  background:transparent;border:1px solid rgba(255,255,255,0.06);
+  color:var(--text);text-decoration:none;cursor:pointer;
+}
+.btn:hover{ background:rgba(255,255,255,0.03) }
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),#2563eb);
+  border:0;color:#042033;font-weight:600;
+}
+
+/* Skills pills */
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill{
+  background:rgba(255,255,255,0.03);
+  padding:6px 8px;border-radius:999px;font-size:13px;color:var(--muted);
+}
+
+/* Projects grid */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+  margin-top:12px;
+}
+.project{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);
+}
+.project h3{margin-bottom:6px}
+.project p{color:var(--muted);font-size:14px}
+.project .tech{font-size:13px;color:rgba(230,238,248,0.7)}
+.project .actions{margin-top:8px}
+
+
+#contact a {
+  color: #3b82f6;           
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+
+#contact a:hover,
+#contact a:focus {
+  color: #60a5fa;          
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;    
+  align-items: center;         
+  gap: 24px;                   
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 48px auto 0 auto;    
+  padding: 20px 0;             
+  color: var(--muted-2);
+  text-align: center;
+  flex-wrap: wrap;             
+}
+
+.footnote {
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+/* Accessibility & focus */
+a:focus, button:focus {
+  outline: 3px solid rgba(96,165,250,0.18);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero{flex-direction:column}
+  .hero .right{width:100%}
+  header{flex-direction:column;align-items:flex-start;gap:12px}
+  footer{flex-direction:column;align-items:flex-start;gap:6px}
+}

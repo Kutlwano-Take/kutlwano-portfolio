@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kutlwano Take — Portfolio</title>
+  <meta name="description" content="Software Developer portfolio — projects: Agile Kickoff, Generative AI app, Power Apps asset manager." />
+  <link rel="canonical" href="https://kutlwanotake.dev/">
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">Skip to content</a>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">KT</div>
+      <div>
+      <div class="name">Kutlwano Take</div>
+      <div class="tagline">
+        Software Developer | AWS Certified Developer Associate 2025 | 
+        Full-Stack & Cloud Engineer | 
+        JavaScript • Node.js • React • Gemini AI • 
+        AWS (Elastic Beanstalk • Lambda • RDS) • 
+        Serverless • Prompt Engineering • Vercel • Git
+      </div>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" role="region" aria-labelledby="intro-title">
+    <div>
+      <h1 id="intro-title">Building accessible, responsive web apps with modern cloud tooling</h1>
+      <p>I design and develop user-focused interfaces using HTML, CSS, JavaScript (React). I build cloud-enabled solutions and CI/CD pipelines on AWS, and collaborate using Git workflows.</p>
+      <div class="cta">
+        <button class="btn btn-primary" data-scroll="#projects">View Projects</button>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+
+      <div class="card mt-18">
+        <strong>Key skills</strong>
+        <div class="skills" aria-hidden="true">
+          <span class="pill">AWS Elastic Beanstalk</span>
+          <span class="pill">AWS Lambda & Function URLs (serverless)</span>
+          <span class="pill">Amazon RDS MySQL (persistent storage)</span>
+          <span class="pill">IAM & Security Groups</span>
+          <span class="pill">API Proxying & CORS Security</span>
+          <span class="pill">Serverless Architecture</span>
+          <span class="pill">Google Gemini 1.5 Flash Integration</span>
+          <span class="pill">Advanced Prompt Engineering</span>
+          <span class="pill">Node.js & Express</span>
+          <span class="pill">Full-Stack JavaScript (Vanilla JS)</span>
+          <span class="pill">React</span>
+          <span class="pill">Responsive HTML/CSS Design</span>
+          <span class="pill">Vercel Deployment</span>
+          <span class="pill">Git & Version Control</span>
+          <span class="pill">Debugging & Problem Solving</span>
+          <span class="pill">Cloud Networking & Troubleshooting</span>
+          <span class="pill">Production-Grade Deployment (af-south-1)</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="right card stack-8">
+      <div class="fw-700">Certifications</div>
+      <div class="small muted-strong">Ultimate AWS Certified Developer Associate-2025</div>
+      <div class="small muted-strong">Microsoft Power Platform Fundamentals</div>
+      <div class="small muted-strong">Software Testing Bootcamp-2025</div>
+      <div class="small muted-strong">Version Control with Git</div>
+      <div class="small muted-strong">Introduction to Generative AI</div>
+
+      <div class="mt-10">
+        <a href="https://www.canva.com/design/DAGqyWNU8c4/xuB3xbFqQanvMV6sbynm6A/view?utm_content=DAGqyWNU8c4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf43ea5b201" class="btn" target="_blank" rel="noopener noreferrer">Open Curriculum Vitae</a>
+      </div>
+    </aside>
+  </section>
+
+  <main>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected projects</h2>
+      <div class="projects" id="projects-grid">
+
+
+        <article class="project" aria-labelledby="p2">
+          <h3 id="p2">Caption Craft – AI Social Media Caption Generator (Initial Prototype → Production)</h3>
+          
+          <p>Designed and developed a sleek, high-performance web app that instantly generates three platform-specific social media captions (Instagram, X/Twitter, LinkedIn) using Google Gemini 1.5 Flash. 
+             Focused heavily on advanced prompt engineering to achieve consistent, creative, and on-brand output with tone and length constraints. 
+             Built with pure vanilla JavaScript, HTML, and CSS - no frameworks - for maximum speed and full control.</p>
+          
+          <p>This started as a rapid prototype deployed on Vercel in under 4 hours to validate the concept and UI/UX. 
+             After proving the idea worked perfectly, I evolved it into a full production-grade, secure AWS deployment (see project next) featuring:</p>
+          <br>
+          <p class="tech">Tech: Vanilla JavaScript, HTML5, CSS3, Google Gemini 1.5 Flash API, Advanced Prompt Engineering, Responsive Design, Vercel (prototype).</p>
+          
+          <div class="actions">
+            <a class="btn" href="https://caption-craft-five.vercel.app/" target="_blank" rel="noopener" aria-label="View lightning-fast Vercel prototype">View Live Prototype</a>
+          </div>
+        </article>
+
+        
+        <article class="project" aria-labelledby="p1">
+          <h3 id="p1">Caption Craft – Secure Generative AI Caption Generator (Full AWS Deployment)</h3>
+          <p>Built and deployed a full-stack AI-powered social media caption generator. 
+             Secured the Gemini API key by implementing a serverless proxy with AWS Lambda Function URL (zero client-side exposure). 
+             Backend runs on Elastic Beanstalk (Node.js + Express), frontend is pure HTML/CSS/JS served directly from Beanstalk, 
+             and all user interactions are persistently stored in Amazon RDS MySQL. 
+             Overcame real-world CORS, JSON parsing, and networking challenges to deliver a production-ready, secure application in the af-south-1 (Cape Town) region.</p>
+          <br>
+          <p class="tech">Tech: AWS Elastic Beanstalk, AWS Lambda (Function URL), RDS MySQL, IAM, Security Groups, Node.js, Express, vanilla JavaScript, HTML/CSS, Google Gemini API, Git</p>
+          
+          <div class="actions">
+            <a class="btn" href="http://Cloud-app-env.eba-tu3rjvwq.af-south-1.elasticbeanstalk.com/" target="_blank" rel="noopener" aria-label="View live Caption Craft app on AWS">View Live on AWS</a>
+          </div>
+        </article>
+
+        <article class="project" aria-labelledby="p1">
+          <h3 id="p1">NYC 311 Social Services – Full Data Engineering Pipeline</h3>
+          
+          <p>Built a complete end-to-end data engineering solution using the official NYC 311 Service Requests dataset (800+ rows). 
+             Designed a normalized PostgreSQL schema on AWS RDS, wrote advanced SQL with JOINs, CTEs, window functions and aggregations to uncover social-service trends across boroughs. 
+             Engineered a robust Python ETL pipeline (pandas + sqlalchemy + boto3) that extracts raw CSV, cleans and validates data, applies business logic, loads into RDS PostgreSQL and archives to S3. 
+             Deployed an interactive Streamlit dashboard for real-time filtering and visualization of complaint volume, response times, and agency performance.</p>
+          
+          <p class="tech">Tech: Python (pandas, sqlalchemy, boto3), PostgreSQL (complex SQL, CTEs, JOINs), AWS RDS, AWS S3, Streamlit, ETL Design, Data Cleaning & Validation, Git</p>
+          
+          <div class="actions">
+            <a class="btn" href="https://nycsocialservices311-8xytyl5av2bxltnx99mrqh.streamlit.app/" target="_blank" rel="noopener" aria-label="View live NYC 311 Social Services dashboard">View Live Dashboard</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="mt-22">
+      <h2>About</h2>
+      <p>I’m a Johannesburg-based Full-Stack & Cloud Developer who lives for that moment when the console goes silent and everything just works. I love crushing bugs at 2 a.m., writing stupidly clean code, and adding tiny hover effects nobody asked for. Give me coffee, a good playlist, and a tough problem - I’m happy. Fun fact: My debugging playlist is 100% soul music. If the groove doesn’t hit, the bug doesn’t quit. Simple Joburg rules.</p>
+    </section>
+
+    <section id="contact" class="mt-22">
+      <h2>Contact</h2>
+      <p>Want to collaborate? Email me at <a href="mailto:kutlwanotake214@gmail.com">kutlwanotake214@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/kutlwano-take-42229431b/" rel="noopener noreferrer" target="_blank">LinkedIn</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> Kutlwano Take</div>
+  </footer>
+</body>
+</html>

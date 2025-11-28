@@ -11,10 +11,10 @@
 </head>
 <body>
   <a class="skip-link" href="#projects">Skip to content</a>
-  <header>
-    <div class="brand">
-      <div class="logo" aria-hidden="true">KT</div>
-      <div>
+<header class="fixed-header">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">KT</div>
+    <div>
       <div class="name">Kutlwano Take</div>
       <div class="tagline">
         Software Developer | AWS Certified Developer Associate 2025 | 
@@ -23,47 +23,27 @@
         AWS (Elastic Beanstalk • Lambda • RDS) • 
         Serverless • Prompt Engineering • Vercel • Git
       </div>
-      </div>
     </div>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </div>
+
+  <nav aria-label="Main navigation" class="nav">
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <section class="hero" role="region" aria-labelledby="intro-title">
     <div>
       <h1 id="intro-title">Building accessible, responsive web apps with modern cloud tooling</h1>
       <p>I design and develop user-focused interfaces using HTML, CSS, JavaScript (React). I build cloud-enabled solutions and CI/CD pipelines on AWS, and collaborate using Git workflows.</p>
-      <div class="cta">
-        <button class="btn btn-primary" data-scroll="#projects">View Projects</button>
-        <a class="btn" href="#contact">Get in touch</a>
-      </div>
-
       <div class="card mt-18">
-        <strong>Key skills</strong>
-        <div class="skills" aria-hidden="true">
-          <span class="pill">AWS Elastic Beanstalk</span>
-          <span class="pill">AWS Lambda & Function URLs (serverless)</span>
-          <span class="pill">Amazon RDS MySQL (persistent storage)</span>
-          <span class="pill">IAM & Security Groups</span>
-          <span class="pill">API Proxying & CORS Security</span>
-          <span class="pill">Serverless Architecture</span>
-          <span class="pill">Google Gemini 1.5 Flash Integration</span>
-          <span class="pill">Advanced Prompt Engineering</span>
-          <span class="pill">Node.js & Express</span>
-          <span class="pill">Full-Stack JavaScript (Vanilla JS)</span>
-          <span class="pill">React</span>
-          <span class="pill">Responsive HTML/CSS Design</span>
-          <span class="pill">Vercel Deployment</span>
-          <span class="pill">Git & Version Control</span>
-          <span class="pill">Debugging & Problem Solving</span>
-          <span class="pill">Cloud Networking & Troubleshooting</span>
-          <span class="pill">Production-Grade Deployment (af-south-1)</span>
-        </div>
+            <section id="about" class="mt-22">
+      <h2>About</h2>
+      <p>I’m a Johannesburg-based Full-Stack & Cloud Engineer passionate about building fast, accessible, and production-ready applications. I specialize in modern JavaScript ecosystems (Vanilla JS, React, Node.js, Express), advanced prompt engineering with Google Gemini 1.5 Flash, and serverless architectures on AWS-Elastic Beanstalk, Lambda with Function URLs, RDS MySQL, IAM, Security Groups, API proxying, and CORS-hardened deployments in af-south-1. I’m comfortable shipping responsive front-ends, designing secure back-ends, crafting CI/CD workflows with Git and Vercel, debugging complex cloud networking issues, and delivering everything from rapid prototypes to fully persistent, production-grade systems. AWS Certified Developer Associate 2025 holder with a love for clean code, thoughtful UX, and that satisfying moment when the console finally stays quiet. Coffee, soul music, and tough bugs keep me going.</p>
+    </section>
       </div>
     </div>
 
@@ -73,7 +53,7 @@
       <div class="small muted-strong">Microsoft Power Platform Fundamentals</div>
       <div class="small muted-strong">Software Testing Bootcamp-2025</div>
       <div class="small muted-strong">Version Control with Git</div>
-      <div class="small muted-strong">Introduction to Generative AI</div>
+      <div class="small muted-strong">AWS Cloud Practitioner Essentials </div>
 
       <div class="mt-10">
         <a href="https://www.canva.com/design/DAGqyWNU8c4/xuB3xbFqQanvMV6sbynm6A/view?utm_content=DAGqyWNU8c4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf43ea5b201" class="btn" target="_blank" rel="noopener noreferrer">Open Curriculum Vitae</a>
@@ -86,18 +66,23 @@
       <h2 id="projects-title">Selected projects</h2>
       <div class="projects" id="projects-grid">
 
-
         <article class="project" aria-labelledby="p2">
           <h3 id="p2">Caption Craft – AI Social Media Caption Generator (Initial Prototype → Production)</h3>
           
-          <p>Designed and developed a sleek, high-performance web app that instantly generates three platform-specific social media captions (Instagram, X/Twitter, LinkedIn) using Google Gemini 1.5 Flash. 
-             Focused heavily on advanced prompt engineering to achieve consistent, creative, and on-brand output with tone and length constraints. 
-             Built with pure vanilla JavaScript, HTML, and CSS - no frameworks - for maximum speed and full control.</p>
-          
-          <p>This started as a rapid prototype deployed on Vercel in under 4 hours to validate the concept and UI/UX. 
-             After proving the idea worked perfectly, I evolved it into a full production-grade, secure AWS deployment (see project next) featuring:</p>
+           <p>< Built a fast, elegant social media caption generator that instantly creates three tailored captions (Instagram, X/Twitter, LinkedIn) using Google Gemini 1.5 Flash.
+            Heavily refined prompt engineering delivers consistent, creative, and perfectly on-brand results with precise tone and length control.
+            Developed from scratch in pure vanilla JavaScript, HTML, and CSS (zero frameworks) for blazing speed and total control.
+            Rapidly prototyped and deployed on Vercel in under 4 hours to validate concept and UX, then evolved into a fully secure, production-grade AWS deployment (next project).</p>
           <br>
-          <p class="tech">Tech: Vanilla JavaScript, HTML5, CSS3, Google Gemini 1.5 Flash API, Advanced Prompt Engineering, Responsive Design, Vercel (prototype).</p>
+          <div class="tech-stack">
+            <span class="pill">Vanilla JavaScript</span>
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+            <span class="pill">Google Gemini 1.5 Flash API</span>
+            <span class="pill">Advanced Prompt Engineering</span>
+            <span class="pill">Responsive Design</span>
+            <span class="pill">Vercel (prototype)</span>
+          </div>
           
           <div class="actions">
             <a class="btn" href="https://caption-craft-five.vercel.app/" target="_blank" rel="noopener" aria-label="View lightning-fast Vercel prototype">View Live Prototype</a>
@@ -107,13 +92,22 @@
         
         <article class="project" aria-labelledby="p1">
           <h3 id="p1">Caption Craft – Secure Generative AI Caption Generator (Full AWS Deployment)</h3>
-          <p>Built and deployed a full-stack AI-powered social media caption generator. 
-             Secured the Gemini API key by implementing a serverless proxy with AWS Lambda Function URL (zero client-side exposure). 
-             Backend runs on Elastic Beanstalk (Node.js + Express), frontend is pure HTML/CSS/JS served directly from Beanstalk, 
-             and all user interactions are persistently stored in Amazon RDS MySQL. 
-             Overcame real-world CORS, JSON parsing, and networking challenges to deliver a production-ready, secure application in the af-south-1 (Cape Town) region.</p>
+          <p>Developed a production-grade, full-stack AI caption generator powered by Google Gemini.
+              Secured the API key with a serverless AWS Lambda Function URL proxy (no client-side exposure).
+              Deployed backend on Elastic Beanstalk (Node.js + Express), served pure HTML/CSS/JS frontend directly from Beanstalk, and persisted all data in Amazon RDS MySQL.
+              Resolved complex CORS, networking, and security challenges to deliver a fully secure, high-performance app live in AWS af-south-1 (Cape Town).</p>
           <br>
-          <p class="tech">Tech: AWS Elastic Beanstalk, AWS Lambda (Function URL), RDS MySQL, IAM, Security Groups, Node.js, Express, vanilla JavaScript, HTML/CSS, Google Gemini API, Git</p>
+            <div class="tech-stack">
+              <span class="pill">AWS Elastic Beanstalk</span>
+              <span class="pill">AWS Lambda (Function URL)</span>
+              <span class="pill">Amazon RDS MySQL</span>
+              <span class="pill">IAM & Security Groups</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Express</span>
+              <span class="pill">Vanilla JavaScript</span>
+              <span class="pill">Google Gemini API</span>
+              <span class="pill">Git</span>
+            </div>
           
           <div class="actions">
             <a class="btn" href="http://Cloud-app-env.eba-tu3rjvwq.af-south-1.elasticbeanstalk.com/" target="_blank" rel="noopener" aria-label="View live Caption Craft app on AWS">View Live on AWS</a>
@@ -123,12 +117,21 @@
         <article class="project" aria-labelledby="p1">
           <h3 id="p1">NYC 311 Social Services – Full Data Engineering Pipeline</h3>
           
-          <p>Built a complete end-to-end data engineering solution using the official NYC 311 Service Requests dataset (800+ rows). 
-             Designed a normalized PostgreSQL schema on AWS RDS, wrote advanced SQL with JOINs, CTEs, window functions and aggregations to uncover social-service trends across boroughs. 
-             Engineered a robust Python ETL pipeline (pandas + sqlalchemy + boto3) that extracts raw CSV, cleans and validates data, applies business logic, loads into RDS PostgreSQL and archives to S3. 
-             Deployed an interactive Streamlit dashboard for real-time filtering and visualization of complaint volume, response times, and agency performance.</p>
-          
-          <p class="tech">Tech: Python (pandas, sqlalchemy, boto3), PostgreSQL (complex SQL, CTEs, JOINs), AWS RDS, AWS S3, Streamlit, ETL Design, Data Cleaning & Validation, Git</p>
+          <p>Built a complete end-to-end data engineering pipeline using the official NYC 311 Service Requests dataset.
+              Designed a normalized PostgreSQL schema on AWS RDS and wrote advanced SQL (JOINs, CTEs, window functions, aggregations) to reveal social-service trends across boroughs.
+              Engineered a robust Python ETL pipeline with pandas, sqlalchemy, and boto3-extracting, cleaning, transforming, loading data into RDS, and archiving to S3.
+              Deployed an interactive, real-time Streamlit dashboard for exploring complaint volume, response times, and agency performance with dynamic filtering and visualizations.</p>
+          <br>
+          <div class="tech-stack">
+            <span class="pill">Python (pandas, sqlalchemy, boto3)</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">AWS RDS</span>
+            <span class="pill">AWS S3</span>
+            <span class="pill">Streamlit</span>
+            <span class="pill">ETL Design</span>
+            <span class="pill">Data Cleaning & Validation</span>
+            <span class="pill">Git</span>
+          </div>
           
           <div class="actions">
             <a class="btn" href="https://nycsocialservices311-8xytyl5av2bxltnx99mrqh.streamlit.app/" target="_blank" rel="noopener" aria-label="View live NYC 311 Social Services dashboard">View Live Dashboard</a>
@@ -137,16 +140,39 @@
 
       </div>
     </section>
+    <br>
+      <section id="contact" class="mt-22">
+        <h2>Contact</h2>
+        <p class="mb-16">Got a project, opportunity, or just want to say hi? Fill out the form below.</p>
 
-    <section id="about" class="mt-22">
-      <h2>About</h2>
-      <p>I’m a Johannesburg-based Full-Stack & Cloud Developer who lives for that moment when the console goes silent and everything just works. I love crushing bugs at 2 a.m., writing stupidly clean code, and adding tiny hover effects nobody asked for. Give me coffee, a good playlist, and a tough problem - I’m happy. Fun fact: My debugging playlist is 100% soul music. If the groove doesn’t hit, the bug doesn’t quit. Simple Joburg rules.</p>
-    </section>
+        <form action="https://formspree.io/f/xovokeqy" method="POST" class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
 
-    <section id="contact" class="mt-22">
-      <h2>Contact</h2>
-      <p>Want to collaborate? Email me at <a href="mailto:kutlwanotake214@gmail.com">kutlwanotake214@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/kutlwano-take-42229431b/" rel="noopener noreferrer" target="_blank">LinkedIn</a>.</p>
-    </section>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" required placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="What’s this about?" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Hey Kutlwano, I came across your portfolio and…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+
+          <p class="form-note mt-12 small muted-strong"></p>
+        </form>
+      </section>
   </main>
 
   <footer>

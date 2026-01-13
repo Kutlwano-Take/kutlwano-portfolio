@@ -3,150 +3,240 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kutlwano Take — Portfolio</title>
-  <meta name="description" content="Software Developer portfolio — projects: Agile Kickoff, Generative AI app, Power Apps asset manager." />
-  <link rel="canonical" href="https://kutlwanotake.dev/">
+  <title>Kutlwano Take — Full-Stack & Cloud Developer Portfolio</title>
+  <meta name="description" content="Full-Stack & Cloud Developer portfolio — AWS, React, Node.js, Terraform, serverless architectures." />
+  <link rel="canonical" href="https://kutlwano-portfolio.vercel.app/">
+  
+ 
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kutlwano-portfolio.vercel.app/">
+  <meta property="og:title" content="Kutlwano Take — Full-Stack & Cloud Developer Portfolio">
+  <meta property="og:description" content="Full-Stack & Cloud Developer specializing in AWS, React, Node.js, Terraform, and serverless architectures.">
+  <meta property="og:image" content="https://kutlwano-portfolio.vercel.app/images/profile.jp.jpeg">
+  
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kutlwano-portfolio.vercel.app/">
+  <meta property="twitter:title" content="Kutlwano Take — Full-Stack & Cloud Developer Portfolio">
+  <meta property="twitter:description" content="Full-Stack & Cloud Developer specializing in AWS, React, Node.js, Terraform, and serverless architectures.">
+  <meta property="twitter:image" content="https://kutlwano-portfolio.vercel.app/images/profile.jp.jpeg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="javascript.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#projects">Skip to content</a>
-<header class="fixed-header">
-  <div class="brand">
-    <div class="logo" aria-hidden="true">KT</div>
-    <div>
-      <div class="name">Kutlwano Take</div>
-      <div class="tagline">
-        Software Developer | AWS Certified Developer Associate 2025 | 
-        Full-Stack & Cloud Engineer | 
-        JavaScript • Node.js • React • Gemini AI • 
-        AWS (Elastic Beanstalk • Lambda • RDS) • 
-        Serverless • Prompt Engineering • Vercel • Git
-      </div>
-    </div>
-  </div>
-
-  <nav aria-label="Main navigation" class="nav">
-    <ul>
-      <li><a href="#intro-title">About</a></li>
-      <li><a href="#space">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section class="hero" role="region" aria-labelledby="intro-title">
-    <div>
-      <h1 id="intro-title">Building accessible, responsive web apps with modern cloud tooling</h1>
-      <p>I design and develop user-focused interfaces using HTML, CSS, JavaScript (React). I build cloud-enabled solutions and CI/CD pipelines on AWS, and collaborate using Git workflows.</p>
-      <div class="card mt-18">
-            <section id="about" class="mt-22">
-      <h2>About</h2>
-      <p>I’m a Johannesburg-based Full-Stack & Cloud Engineer passionate about building fast, accessible, and production-ready applications. I specialize in modern JavaScript ecosystems (Vanilla JS, React, Node.js, Express), advanced prompt engineering with Google Gemini 1.5 Flash, and serverless architectures on AWS-Elastic Beanstalk, Lambda with Function URLs, RDS MySQL, IAM, Security Groups, API proxying, and CORS-hardened deployments in af-south-1. I’m comfortable shipping responsive front-ends, designing secure back-ends, crafting CI/CD workflows with Git and Vercel, debugging complex cloud networking issues, and delivering everything from rapid prototypes to fully persistent, production-grade systems. AWS Certified Developer Associate 2025 holder with a love for clean code, thoughtful UX, and that satisfying moment when the console finally stays quiet. Coffee, soul music, and tough bugs keep me going.</p>
-    </section>
+  <a class="skip-link" href="#hero">Skip to content</a>
+  
+  <header class="fixed-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">KT</div>
+      <div>
+        <div class="name">Kutlwano Take</div>
+        <div class="tagline">
+          Full-Stack & Cloud Developer | AWS Certified Developer Associate 2025
+        </div>
       </div>
     </div>
 
-    <aside class="right card stack-8">
-      <div class="fw-700">Certifications</div>
-      <div class="small muted-strong">Ultimate AWS Certified Developer Associate-2025</div>
-      <div class="small muted-strong">Microsoft Power Platform Fundamentals</div>
-      <div class="small muted-strong">Software Testing Bootcamp-2025</div>
-      <div class="small muted-strong">Version Control with Git</div>
-      <div class="small muted-strong">AWS Cloud Practitioner Essentials </div>
-
-      <div class="mt-10">
-        <a href="https://www.canva.com/design/DAGqyWNU8c4/xuB3xbFqQanvMV6sbynm6A/view?utm_content=DAGqyWNU8c4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf43ea5b201" class="btn" target="_blank" rel="noopener noreferrer">Open Curriculum Vitae</a>
-      </div>
-    </aside>
-  </section>
-   <section id="space" aria-labelledby="projects-title"></section>
-   <br>
-   <br>
+    <nav aria-label="Main navigation" class="nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Selected projects</h2>
-      <div class="projects" id="projects-grid">
-
-        <article class="project" aria-labelledby="p2">
-          <h3 id="p2">Caption Craft – AI Social Media Caption Generator (Initial Prototype → Production)</h3>
-          
-           <p>< Built a fast, elegant social media caption generator that instantly creates three tailored captions (Instagram, X/Twitter, LinkedIn) using Google Gemini 1.5 Flash.
-            Heavily refined prompt engineering delivers consistent, creative, and perfectly on-brand results with precise tone and length control.
-            Developed from scratch in pure vanilla JavaScript, HTML, and CSS (zero frameworks) for blazing speed and total control.
-            Rapidly prototyped and deployed on Vercel in under 4 hours to validate concept and UX, then evolved into a fully secure, production-grade AWS deployment (next project).</p>
-          <br>
-          <div class="tech-stack">
-            <span class="pill">Vanilla JavaScript</span>
-            <span class="pill">HTML5</span>
-            <span class="pill">CSS3</span>
-            <span class="pill">Google Gemini 1.5 Flash API</span>
-            <span class="pill">Advanced Prompt Engineering</span>
-            <span class="pill">Responsive Design</span>
-            <span class="pill">Vercel (prototype)</span>
-          </div>
-          
-          <div class="actions">
-            <a class="btn" href="https://caption-craft-five.vercel.app/" target="_blank" rel="noopener" aria-label="View lightning-fast Vercel prototype">View Live Prototype</a>
-          </div>
-        </article>
-
-        
-        <article class="project" aria-labelledby="p1">
-          <h3 id="p1">Caption Craft – Secure Generative AI Caption Generator (Full AWS Deployment)</h3>
-          <p>Developed a production-grade, full-stack AI caption generator powered by Google Gemini.
-              Secured the API key with a serverless AWS Lambda Function URL proxy (no client-side exposure).
-              Deployed backend on Elastic Beanstalk (Node.js + Express), served pure HTML/CSS/JS frontend directly from Beanstalk, and persisted all data in Amazon RDS MySQL.
-              Resolved complex CORS, networking, and security challenges to deliver a fully secure, high-performance app live in AWS af-south-1 (Cape Town).</p>
-          <br>
-            <div class="tech-stack">
-              <span class="pill">AWS Elastic Beanstalk</span>
-              <span class="pill">AWS Lambda (Function URL)</span>
-              <span class="pill">Amazon RDS MySQL</span>
-              <span class="pill">IAM & Security Groups</span>
-              <span class="pill">Node.js</span>
-              <span class="pill">Express</span>
-              <span class="pill">Vanilla JavaScript</span>
-              <span class="pill">Google Gemini API</span>
-              <span class="pill">Git</span>
-            </div>
-          
-          <div class="actions">
-            <a class="btn" href="http://Cloud-app-env.eba-tu3rjvwq.af-south-1.elasticbeanstalk.com/" target="_blank" rel="noopener" aria-label="View live Caption Craft app on AWS">View Live on AWS</a>
-          </div>
-        </article>
-
-        <article class="project" aria-labelledby="p1">
-          <h3 id="p1">NYC 311 Social Services – Full Data Engineering Pipeline</h3>
-          
-          <p>Built a complete end-to-end data engineering pipeline using the official NYC 311 Service Requests dataset.
-              Designed a normalized PostgreSQL schema on AWS RDS and wrote advanced SQL (JOINs, CTEs, window functions, aggregations) to reveal social-service trends across boroughs.
-              Engineered a robust Python ETL pipeline with pandas, sqlalchemy, and boto3-extracting, cleaning, transforming, loading data into RDS, and archiving to S3.
-              Deployed an interactive, real-time Streamlit dashboard for exploring complaint volume, response times, and agency performance with dynamic filtering and visualizations.</p>
-          <br>
-          <div class="tech-stack">
-            <span class="pill">Python (pandas, sqlalchemy, boto3)</span>
-            <span class="pill">PostgreSQL</span>
-            <span class="pill">AWS RDS</span>
-            <span class="pill">AWS S3</span>
-            <span class="pill">Streamlit</span>
-            <span class="pill">ETL Design</span>
-            <span class="pill">Data Cleaning & Validation</span>
-            <span class="pill">Git</span>
-          </div>
-          
-          <div class="actions">
-            <a class="btn" href="https://nycsocialservices311-8xytyl5av2bxltnx99mrqh.streamlit.app/" target="_blank" rel="noopener" aria-label="View live NYC 311 Social Services dashboard">View Live Dashboard</a>
-          </div>
-        </article>
-
+    <section id="hero" class="hero-section" role="region" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-image-wrapper">
+          <img src="images/profile.jp.jpeg" alt="Kutlwano Take" class="hero-image">
+        </div>
+        <h1 id="hero-title">Kutlwano Take</h1>
+        <p class="hero-subtitle">Full-Stack & Cloud Developer</p>
+        <p class="hero-bio">I design and develop scalable, production-ready applications using modern JavaScript, cloud architectures, and Infrastructure-as-Code. Specializing in AWS serverless solutions, React frontends, and secure backend systems.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
       </div>
     </section>
-    <br>
-      <section id="contact" class="mt-22">
-        <h2>Contact</h2>
-        <p class="mb-16">Got a project, opportunity, or just want to say hi? Fill out the form below.</p>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Me</h2>
+        <div class="content-card">
+          <p>I'm a Johannesburg-based Full-Stack & Cloud Engineer passionate about building fast, accessible, and production-ready applications. I specialize in modern JavaScript ecosystems (Vanilla JS, React, Node.js, Express), advanced prompt engineering with Google Gemini 1.5 Flash, and serverless architectures on AWS-Elastic Beanstalk, Lambda with Function URLs, RDS MySQL, IAM, Security Groups, API proxying, and CORS-hardened deployments in af-south-1.</p>
+          <p>I'm comfortable shipping responsive front-ends, designing secure back-ends, crafting CI/CD workflows with Git and Vercel, debugging complex cloud networking issues, and delivering everything from rapid prototypes to fully persistent, production-grade systems. AWS Certified Developer Associate 2025 holder with a love for clean code, thoughtful UX, and that satisfying moment when the console finally stays quiet. Coffee, soul music, and tough bugs keep me going.</p>
+        </div>
+
+        <div class="certifications-card">
+          <h3>Certifications</h3>
+          <ul class="certifications-list">
+            <li>DevOps on AWS: Code, Build, and Testing</li>
+            <li>AWS Cloud Practitioner Essentials</li>
+            <li>Introduction to Containers w/ Docker, Kubernetes & OpenShift</li>
+            <li>Version Control with Git</li>
+            <li>Ultimate AWS Certified Developer Associate</li>
+          </ul>
+          <div class="mt-10">
+            <a href="https://www.canva.com/design/DAGqyWNU8c4/xuB3xbFqQanvMV6sbynm6A/view?utm_content=DAGqyWNU8c4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf43ea5b201" class="btn" target="_blank" rel="noopener noreferrer">Open Curriculum Vitae</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item" title="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo">
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-item" title="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo">
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-item" title="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo">
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-item" title="React">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-logo">
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-item" title="Vite">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" class="skill-logo">
+            <span class="skill-name">Vite</span>
+          </div>
+          <div class="skill-item" title="Node.js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-logo">
+            <span class="skill-name">Node.js</span>
+          </div>
+          <div class="skill-item" title="Express">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="skill-logo">
+            <span class="skill-name">Express</span>
+          </div>
+          <div class="skill-item" title="AWS">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="skill-logo">
+            <span class="skill-name">AWS</span>
+          </div>
+          <div class="skill-item" title="Terraform">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="skill-logo">
+            <span class="skill-name">Terraform</span>
+          </div>
+          <div class="skill-item" title="Git">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo">
+            <span class="skill-name">Git</span>
+          </div>
+          <div class="skill-item" title="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo">
+            <span class="skill-name">GitHub</span>
+          </div>
+          <div class="skill-item" title="Docker">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-logo">
+            <span class="skill-name">Docker</span>
+          </div>
+          <div class="skill-item" title="Kubernetes">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="skill-logo">
+            <span class="skill-name">Kubernetes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Selected Projects</h2>
+        <div class="projects-grid" id="projects-grid">
+
+          <article class="project-card" aria-labelledby="p1">
+            <img src="aws-todo-app.png" alt="Screenshot of AWS Scalable To-Do List application showing a dark-themed interface with to-do items" loading="lazy" class="project-image">
+            <div class="project-content">
+              <h3 id="p1">AWS Scalable To-Do List App</h3>
+              <p>Full-stack serverless application with DynamoDB storage, S3 + CloudFront frontend, Lambda + API Gateway backend, and Terraform infrastructure. Features production-ready security and scalable cloud architecture.</p>
+              <div class="tech-stack">
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">Node.js (Lambda)</span>
+                <span class="pill">Terraform (IaC)</span>
+                <span class="pill">AWS S3</span>
+                <span class="pill">CloudFront</span>
+                <span class="pill">API Gateway</span>
+                <span class="pill">Lambda</span>
+                <span class="pill">DynamoDB</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://d2tjhu6fumjbf7.cloudfront.net" target="_blank" rel="noopener" aria-label="View AWS To-Do List App live">View Live</a>
+                <a class="btn btn-secondary" href="https://github.com/Kutlwano-Take/aws-scalable-todo-app" target="_blank" rel="noopener" aria-label="View AWS To-Do List App on GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="p2">
+            <img src="images/caption-craft-aws.png" alt="Screenshot of Caption Craft AI caption generator application with purple header and white form card" loading="lazy" class="project-image">
+            <div class="project-content">
+              <h3 id="p2">Caption Craft – Secure Generative AI Caption Generator</h3>
+              <p>Production-grade AI caption generator powered by Google Gemini. Features secure API key management via AWS Lambda proxy, Elastic Beanstalk backend (Node.js + Express), and RDS MySQL persistence. Deployed live on AWS af-south-1 with resolved CORS and security challenges.</p>
+              <div class="tech-stack">
+                <span class="pill">AWS Elastic Beanstalk</span>
+                <span class="pill">AWS Lambda (Function URL)</span>
+                <span class="pill">Amazon RDS MySQL</span>
+                <span class="pill">IAM & Security Groups</span>
+                <span class="pill">Node.js</span>
+                <span class="pill">Express</span>
+                <span class="pill">Vanilla JavaScript</span>
+                <span class="pill">Google Gemini API</span>
+                <span class="pill">Git</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="http://Cloud-app-env.eba-tu3rjvwq.af-south-1.elasticbeanstalk.com/" target="_blank" rel="noopener" aria-label="View live Caption Craft app on AWS">View Live</a>
+                <a class="btn btn-secondary" href="https://github.com/MfobesTechJournal/Caption_Craft" target="_blank" rel="noopener" aria-label="View Caption Craft on GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-labelledby="p3">
+            <img src="images/bittrio-resume-matcher.png" alt="Screenshot of BitTrio Resume Job Matcher application showing resume upload and job description input interface" loading="lazy" class="project-image">
+            <div class="project-content">
+              <h3 id="p3">Resume Job Matcher (AI Powered Project)</h3>
+              <p>AI-powered resume job matching application. Upload resume, AI extracts skills, compares to job descriptions, and instantly provides match percentage, missing skills (gaps), personalized learning path, and career-track recommendations via embeddings.</p>
+              <div class="tech-stack">
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">Python</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">Google Gemini API</span>
+                <span class="pill">Docker</span>
+                <span class="pill">Kubernetes</span>
+                <span class="pill">CI/CD</span>
+                <span class="pill">Vercel</span>
+                <span class="pill">Git</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://bit-trio-resume-job-matcher.vercel.app/" target="_blank" rel="noopener" aria-label="View BitTrio Resume Job Matcher live">View Live</a>
+                <a class="btn btn-secondary" href="https://github.com/MfobesTechJournal/BitTrio-Resume-Job-Matcher" target="_blank" rel="noopener" aria-label="View BitTrio Resume Job Matcher on GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <p class="contact-intro">Got a project, opportunity, or just want to say hi? Fill out the form below.</p>
 
         <form action="https://formspree.io/f/xovokeqy" method="POST" class="contact-form">
           <div class="form-grid">
@@ -163,7 +253,7 @@
 
           <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required placeholder="What’s this about?" />
+            <input type="text" id="subject" name="subject" required placeholder="What's this about?" />
           </div>
 
           <div class="form-group">
@@ -175,11 +265,34 @@
 
           <p class="form-note mt-12 small muted-strong"></p>
         </form>
-      </section>
+      </div>
+    </section>
   </main>
 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
   <footer>
-    <div>© <span id="year"></span> Kutlwano Take</div>
+    <div class="footer-content">
+      <div>© <span id="year"></span> Kutlwano Take</div>
+      <div class="social-links">
+        <a href="https://github.com/Kutlwano-Take" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/kutlwano-take-42229431b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -19,11 +19,10 @@ My official personal portfolio showcasing who I am, my journey as a self-taught 
 - Dark/light mode toggle (coming soon)
 
 ## Projects Showcased
-- AI Resume Analyzer (Appsmith + Google Gemini)
 - AI Portfolio Assistant (AWS Elastic Beanstalk + CodePipeline)
 - NYC 311 Data Dashboard (Python + Streamlit + AWS)
 - Caption Craft – AI Social Media Caption Generator (React + Gemini API)
-- Multi-Cloud Deployment Demo (Docker + Kubernetes + Terraform)
+- Multi-Cloud Deployment Demo (AWS)
 
 ## Local Development
 ```bash

@@ -1,15 +1,31 @@
-// Portfolio JavaScript - Vanilla JS only
+
 
 (function() {
   'use strict';
 
-  // Set current year in footer
+
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Smooth scroll for navigation links
+  
+  const header = document.querySelector('.fixed-header');
+  const navToggle = document.querySelector('.nav-toggle');
+
+  function closeMobileNav() {
+    if (!header || !navToggle) return;
+    header.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (navToggle && header) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href^="#"]');
     if (!link) return;
@@ -20,7 +36,7 @@
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
-      const headerOffset = 100;
+      const headerOffset = header ? header.offsetHeight + 12 : 100;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -29,12 +45,13 @@
         behavior: 'smooth'
       });
 
-      // Update active nav link
+      
       updateActiveNavLink(href);
+      closeMobileNav();
     }
   });
 
-  // Update active navigation link based on scroll position
+ 
   function updateActiveNavLink(hash) {
     const navLinks = document.querySelectorAll('.nav a');
     navLinks.forEach(link => {
@@ -45,7 +62,7 @@
     });
   }
 
-  // Update active nav link on scroll
+ 
   let ticking = false;
   window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -78,10 +95,8 @@
     });
   }
 
-  // Header scroll effect
+
   let lastScroll = 0;
-  const header = document.querySelector('.fixed-header');
-  
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
@@ -98,7 +113,7 @@
     lastScroll = currentScroll;
   });
 
-  // Add accessible keyboard focus for project cards
+  
   document.querySelectorAll('.project-card').forEach((card) => {
     card.setAttribute('tabindex', '0');
     
@@ -113,7 +128,7 @@
     });
   });
 
-  // Form submission handling (optional enhancement)
+  
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -122,7 +137,7 @@
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Re-enable after a delay (Formspree will handle the actual submission)
+        
         setTimeout(() => {
           submitBtn.textContent = 'Send Message';
           submitBtn.disabled = false;
@@ -131,7 +146,7 @@
     });
   }
 
-  // Intersection Observer for fade-in animations (optional)
+  
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -146,7 +161,7 @@
     });
   }, observerOptions);
 
-  // Observe project cards for animation
+  
   document.querySelectorAll('.project-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
@@ -154,7 +169,7 @@
     observer.observe(card);
   });
 
-  // Observe content cards
+  
   document.querySelectorAll('.content-card, .certifications-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
@@ -162,7 +177,7 @@
     observer.observe(card);
   });
 
-  // Initial active nav link on page load
+ 
   if (window.location.hash) {
     updateActiveNavLink(window.location.hash);
   } else {
@@ -172,10 +187,10 @@
     }
   }
 
-  // Back to Top Button
+ 
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
-    // Show/hide button on scroll
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         backToTopBtn.classList.add('visible');
@@ -184,7 +199,7 @@
       }
     });
 
-    // Smooth scroll to top on click
+    
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,

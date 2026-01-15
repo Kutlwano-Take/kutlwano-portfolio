@@ -1,8 +1,7 @@
 # Kutlwano Take – Personal Portfolio Website
 
+This is my personal portfolio site where I share my work, background, and current projects as a full-stack and cloud developer.
 Live site: https://kutlwano-portfolio.vercel.app
-
-My official personal portfolio showcasing who I am, my journey as a self-taught full-stack & cloud developer, and all my latest projects (and future) projects.
 
 ## Tech Stack
 - HTML5
@@ -24,9 +23,11 @@ My official personal portfolio showcasing who I am, my journey as a self-taught 
 - Caption Craft – AI Social Media Caption Generator (React + Gemini API)
 - Multi-Cloud Deployment Demo (AWS)
 
+## Deploy (Vercel)
+Vercel deploys from the `main` branch. After pushing changes to GitHub, I run `vercel deploy --prod` to publish the latest build.
+
 ## Local Development
 ```bash
 git clone https://github.com/Kutlwano-Take/kutlwano-portfolio.git
 cd kutlwano-portfolio
-# Open index.html in your browser or use Live Server
 code.

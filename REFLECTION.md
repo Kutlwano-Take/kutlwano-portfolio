@@ -1,6 +1,6 @@
 Portfolio Validation & Reflection
 GitHub: github.com/Kutlwano-Take
-Date: 28 November 2025
+Date: 15 January 2026
 Portfolio Validation Checklist
 ✔ Represents my technical skills accurately
 My portfolio clearly showcases my real strengths in full-stack development (React + Python/FastAPI), AWS cloud engineering, DevOps practices, and generative AI integrations — exactly the stack I use daily.
@@ -18,7 +18,7 @@ Every project has a Live Demo link and GitHub repo link
 Clean screenshots and short Loom/GIF demos embedded in READMEs
 Well-documented code with READMEs, architecture diagrams, and clear setup instructions
 
-✔ Aligns perfectly with my 2025–2026 career goals
+✔ Aligns perfectly with my 2026–2027 career goals
 Target roles: Junior to Mid-level Cloud Engineer, Full-Stack Developer, or AI Engineer (AWS-focused)
 The portfolio screams: “Self-taught, ships fast, cloud-native, loves AI & DevOps” — exactly what Takealot, Derivco, AWS partners, banks, and startups are hiring for right now.
 Personal Reflection

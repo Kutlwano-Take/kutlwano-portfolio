@@ -470,6 +470,18 @@ p {
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
   }
+
+  .project-card.project-todo {
+    order: 3;
+  }
+
+  .project-card.project-spendguard {
+    order: 2;
+  }
+
+  .project-card.project-africlimate {
+    order: 1;
+  }
 }
 
 .project-card {

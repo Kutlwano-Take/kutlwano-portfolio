@@ -2,309 +2,465 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kutlwano Take - Full-Stack & Cloud Engineer Portfolio</title>
-  <meta name="description" content="Full-Stack & Cloud Engineer portfolio featuring AWS serverless apps, TypeScript and React frontends, Python analytics dashboards, and Terraform Infrastructure-as-Code." />
-  <link rel="canonical" href="https://kutlwano-portfolio.vercel.app/">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kutlwano-portfolio.vercel.app/">
-  <meta property="og:title" content="Kutlwano Take - Full-Stack & Cloud Engineer Portfolio">
-  <meta property="og:description" content="Full-Stack & Cloud Engineer specializing in AWS serverless architecture, TypeScript apps, Python analytics, and Terraform IaC.">
-  <meta property="og:image" content="https://kutlwano-portfolio.vercel.app/images/profile.jp.jpeg">
-  
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://kutlwano-portfolio.vercel.app/">
-  <meta property="twitter:title" content="Kutlwano Take - Full-Stack & Cloud Engineer Portfolio">
-  <meta property="twitter:description" content="Full-Stack & Cloud Engineer specializing in AWS serverless architecture, TypeScript apps, Python analytics, and Terraform IaC.">
-  <meta property="twitter:image" content="https://kutlwano-portfolio.vercel.app/images/profile.jp.jpeg">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kutlwano Take | Full-Stack & Cloud Engineer</title>
+  <meta
+    name="description"
+    content="Kutlwano Take builds production-grade cloud applications with AWS serverless, React and TypeScript frontends, Terraform infrastructure, and Python analytics."
+  />
+  <meta name="author" content="Kutlwano Take" />
+  <link rel="canonical" href="https://kutlwano-portfolio.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kutlwano-portfolio.vercel.app/" />
+  <meta property="og:title" content="Kutlwano Take | Full-Stack & Cloud Engineer" />
+  <meta
+    property="og:description"
+    content="Johannesburg-based engineer building secure, scalable web and cloud systems end to end."
+  />
+  <meta property="og:image" content="https://kutlwano-portfolio.vercel.app/images/myprofile.jpeg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://kutlwano-portfolio.vercel.app/" />
+  <meta name="twitter:title" content="Kutlwano Take | Full-Stack & Cloud Engineer" />
+  <meta
+    name="twitter:description"
+    content="Production-ready AWS, React, TypeScript, Terraform, and Python portfolio projects."
+  />
+  <meta name="twitter:image" content="https://kutlwano-portfolio.vercel.app/images/myprofile.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
   <script src="javascript.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#hero">Skip to content</a>
-  
-  <header class="fixed-header">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">KT</div>
-      <div>
-        <div class="name">Kutlwano Take</div>
-        <div class="tagline">
-          Full-Stack & Cloud Engineer | AWS Certified Developer Associate
-        </div>
-      </div>
-    </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-    </button>
+  <div class="page-orb orb-left" aria-hidden="true"></div>
+  <div class="page-orb orb-right" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
-    <nav aria-label="Main navigation" class="nav">
-      <ul id="primary-nav">
-        <li><a href="#hero">Home</a></li>
+  <header class="site-header" id="top">
+    <nav class="nav-shell glass" aria-label="Primary navigation">
+      <a class="brand" href="#hero" aria-label="Kutlwano Take home">
+        <span class="brand-mark">KT</span>
+        <span class="brand-name">Kutlwano Take</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#skills">Stack</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="hero" class="hero-section" role="region" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <div class="hero-image-wrapper">
-          <img src="images/profile.jp.jpeg" alt="Kutlwano Take" class="hero-image">
-        </div>
-        <h1 id="hero-title">Kutlwano Take</h1>
-        <p class="hero-subtitle">Full-Stack & Cloud Engineer</p>
-        <p class="hero-bio">I build production-grade cloud applications end-to-end: AWS serverless backends, TypeScript and React frontends, Terraform Infrastructure-as-Code, and Python analytics dashboards.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-      </div>
-    </section>
+  <main id="main-content" class="noise">
+    <section id="hero" class="hero-section section">
+      <div class="container hero-layout">
+        <div class="hero-copy" data-reveal>
+          <div class="availability-chip glass">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Available for opportunities</span>
+            <span class="divider" aria-hidden="true">|</span>
+            <span>Johannesburg, South Africa</span>
+          </div>
 
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title">About Me</h2>
-        <div class="content-card">
-          <p>I am a Johannesburg-based Full-Stack & Cloud Engineer focused on building secure, scalable applications across AWS and modern web platforms. My core stack spans AWS serverless services, Terraform IaC, TypeScript/React development, and Python data workflows.</p>
-          <p>Recent repository work includes AfriClimate Analytics Lake (Python, Dash, Plotly, Athena), SpendGuard (TypeScript serverless expense tracking on AWS), AWS Scalable To-Do App (React, Lambda, DynamoDB, Terraform), and Landmark Track (Next.js, TypeScript, Supabase). I prioritize reliable deployments, clean architecture, and practical user-centered design.</p>
+          <h1 id="hero-title" class="hero-title">
+            I build <span class="text-gradient font-light">scalable</span><br />
+            cloud applications<br />
+            <span class="hero-muted">that ship.</span>
+          </h1>
+
+          <p class="hero-summary">
+            Full-Stack &amp; Cloud Engineer crafting production-grade systems with
+            AWS serverless, React and TypeScript, Terraform infrastructure, and
+            Python data workflows.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-solid" href="#projects">
+              View selected work
+              <span aria-hidden="true">-></span>
+            </a>
+            <a class="button button-glass" href="#contact">Get in touch</a>
+            <a
+              class="button button-text"
+              href="Kutlwano_Take_CV.pdf"
+              download="Kutlwano_Take_CV.pdf"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
 
-        <div class="certifications-card">
-          <h3>Certifications</h3>
-          <ul class="certifications-list">
-            <li>DevOps on AWS: Code, Build, and Testing</li>
-            <li>AWS Cloud Practitioner Essentials</li>
-            <li>Introduction to Containers w/ Docker, Kubernetes & OpenShift</li>
-            <li>Version Control with Git</li>
-            <li>Ultimate AWS Certified Developer Associate</li>
-          </ul>
-          <div class="mt-10">
-            <a href="https://www.canva.com/design/DAGqyWNU8c4/xuB3xbFqQanvMV6sbynm6A/view?utm_content=DAGqyWNU8c4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf43ea5b201" class="btn" target="_blank" rel="noopener noreferrer">Open Curriculum Vitae</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section" aria-labelledby="skills-title">
-      <div class="container">
-        <h2 id="skills-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-item" title="HTML5">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo">
-            <span class="skill-name">HTML5</span>
-          </div>
-          <div class="skill-item" title="CSS3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo">
-            <span class="skill-name">CSS3</span>
-          </div>
-          <div class="skill-item" title="JavaScript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo">
-            <span class="skill-name">JavaScript</span>
-          </div>
-          <div class="skill-item" title="TypeScript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-logo">
-            <span class="skill-name">TypeScript</span>
-          </div>
-          <div class="skill-item" title="Python">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-logo">
-            <span class="skill-name">Python</span>
-          </div>
-          <div class="skill-item" title="React">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-logo">
-            <span class="skill-name">React</span>
-          </div>
-          <div class="skill-item" title="Next.js">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="skill-logo">
-            <span class="skill-name">Next.js</span>
-          </div>
-          <div class="skill-item" title="Node.js">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-logo">
-            <span class="skill-name">Node.js</span>
-          </div>
-          <div class="skill-item" title="AWS">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" class="skill-logo">
-            <span class="skill-name">AWS</span>
-          </div>
-          <div class="skill-item" title="Terraform">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="skill-logo">
-            <span class="skill-name">Terraform</span>
-          </div>
-          <div class="skill-item" title="Tailwind CSS">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="skill-logo">
-            <span class="skill-name">Tailwind CSS</span>
-          </div>
-          <div class="skill-item" title="Supabase">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" class="skill-logo">
-            <span class="skill-name">Supabase</span>
-          </div>
-          <div class="skill-item" title="Git">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-logo">
-            <span class="skill-name">Git</span>
-          </div>
-          <div class="skill-item" title="GitHub">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-logo">
-            <span class="skill-name">GitHub</span>
-          </div>
+        <div class="hero-profile" data-reveal>
+          <div class="profile-glow" aria-hidden="true"></div>
+          <img
+            src="images/myprofile.jpeg"
+            alt="Kutlwano Take, Full-Stack and Cloud Engineer"
+            class="profile-image"
+          />
+          <p class="profile-caption">Kutlwano Take</p>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section section-alt" aria-labelledby="projects-title">
+    <section id="projects" class="section">
       <div class="container">
-        <h2 id="projects-title">Selected Projects</h2>
-        <div class="projects-grid" id="projects-grid">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Things I've <span class="text-gradient font-light">shipped</span>.</h2>
+          </div>
+          <p class="section-lead">
+            A focused set of production builds across analytics, personal finance,
+            and serverless application architecture.
+          </p>
+        </div>
 
-          <article class="project-card project-africlimate" aria-labelledby="p1">
-            <img src="images/africlimate-dashboard-screenshot.png" alt="Screenshot of AfriClimate Analytics Dash application showing drought, water security, climate risk, community impact, and carbon analytics modules" loading="lazy" class="project-image">
-            <div class="project-content">
-              <h3 id="p1">AfriClimate Analytics Lake - Climate Intelligence Platform</h3>
-              <p>Production-ready climate analytics platform for Southern Africa with a serverless AWS data pipeline and live Dash application. It ingests CHIRPS climate data into S3, processes it with Lambda, catalogs data in Glue, and serves analytics through Athena with an interactive 5-module dashboard for drought, water security, climate risk, community impact, and carbon insights. Deployed on Render with Gunicorn and a fallback dataset mode for reliable public demo access.</p>
-              <div class="tech-stack">
-                <span class="pill">Python 3.11</span>
-                <span class="pill">Dash</span>
-                <span class="pill">Plotly</span>
-                <span class="pill">AWS S3</span>
-                <span class="pill">AWS Lambda</span>
-                <span class="pill">AWS Glue</span>
-                <span class="pill">Amazon Athena</span>
-                <span class="pill">Boto3</span>
-                <span class="pill">Pandas</span>
-                <span class="pill">Render</span>
-                <span class="pill">Gunicorn</span>
-                <span class="pill">CHIRPS Data</span>
+        <div class="project-list">
+          <article class="project-card glass border-gradient" data-reveal>
+            <div class="project-media">
+              <div class="project-accent accent-emerald" aria-hidden="true"></div>
+              <img
+                src="images/africlimate-updated.png"
+                alt="AfriClimate Analytics Platform dashboard and architecture preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-copy">
+              <p class="project-index">01 / Climate Intelligence Platform</p>
+              <h3>AfriClimate Analytics Platform</h3>
+              <p>
+                AI-powered climate intelligence platform for Africa. It turns
+                CHIRPS rainfall observations into operational insight for
+                governments, NGOs, and researchers through AWS-native data
+                engineering, a serverless climate pipeline, and an interactive
+                decision dashboard deployed on Vercel.
+              </p>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>Dash</span>
+                <span>CHIRPS</span>
+                <span>AWS Lambda</span>
+                <span>S3</span>
+                <span>Glue</span>
+                <span>Athena</span>
+                <span>Vercel</span>
               </div>
               <div class="project-actions">
-                <a class="btn" href="https://kutlwano-take-africlimate-analytics-eight.vercel.app/" target="_blank" rel="noopener" aria-label="View AfriClimate Analytics live">View Live</a>
-                <a class="btn btn-secondary" href="https://github.com/Kutlwano-Take/africlimate-analytics-lake" target="_blank" rel="noopener" aria-label="View AfriClimate Analytics on GitHub">GitHub</a>
+                <a
+                  class="button button-solid"
+                  href="https://kutlwano-take-africlimate-analytics-eight.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live demo
+                </a>
+                <a
+                  class="button button-glass"
+                  href="https://github.com/Kutlwano-Take/africlimate-analytics-lake"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Source code
+                </a>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-spendguard" aria-labelledby="p2">
-            <img src="images/spendguard-screenshot.png" alt="Screenshot of SpendGuard personal expense tracker dashboard showing budget progress rings, expense list, and alerts" loading="lazy" class="project-image">
-            <div class="project-content">
-              <h3 id="p2">SpendGuard - Smart Personal Expense & Budget Tracker</h3>
-              <p>Production-ready, full-stack serverless expense tracker that helps users monitor spending, set category budgets, receive real-time overspending alerts, and gain AI-powered insights. Features secure authentication, receipt OCR scanning, progress visualizations, and predictive analytics, all built with a clean, premium UX.</p>
-              <div class="tech-stack">
-                <span class="pill">React + TypeScript</span>
-                <span class="pill">AWS Amplify (Hosting & Auth)</span>
-                <span class="pill">AWS Cognito</span>
-                <span class="pill">AWS Lambda</span>
-                <span class="pill">API Gateway</span>
-                <span class="pill">DynamoDB</span>
-                <span class="pill">Amazon Textract (OCR)</span>
-                <span class="pill">Amazon SNS (Alerts)</span>
-                <span class="pill">Amazon Bedrock / Gemini (AI Insights)</span>
-                <span class="pill">Tailwind CSS</span>
+          <article class="project-card glass border-gradient" data-reveal>
+            <div class="project-media">
+              <div class="project-accent accent-amber" aria-hidden="true"></div>
+              <img
+                src="images/tshidi-ai-invoice-tool.png"
+                alt="TshidiAI business platform landing page screenshot"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-copy">
+              <p class="project-index">02 / AI Service Business Platform</p>
+              <h3>TshidiAI</h3>
+              <p>
+                AI-powered workspace for South African service businesses. It
+                helps teams onboard clients, send quotes and proposals, sign
+                agreements, collect payments, and manage revenue from one
+                ZAR-first platform built for fast billing and growth.
+              </p>
+              <div class="tag-list">
+                <span>AI Workflows</span>
+                <span>Quotes</span>
+                <span>Proposals</span>
+                <span>Agreements</span>
+                <span>Payments</span>
+                <span>ZAR Billing</span>
+                <span>Vercel</span>
               </div>
               <div class="project-actions">
-                <a class="btn" href="https://live.d23ix241s4yuzf.amplifyapp.com" target="_blank" rel="noopener" aria-label="View SpendGuard live">View Live</a>
-                <a class="btn btn-secondary" href="https://github.com/Kutlwano-Take/SpendGuard" target="_blank" rel="noopener" aria-label="View SpendGuard on GitHub">GitHub</a>
+                <a
+                  class="button button-solid"
+                  href="https://tshidi-ai-invoice-tool.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live demo
+                </a>
+                <a
+                  class="button button-glass"
+                  href="https://github.com/TshidiTech/tshidi-ai-invoice-tool"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Source code
+                </a>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-todo" aria-labelledby="p3">
-            <img src="images/aws-todo-app.png" alt="Screenshot of AWS Scalable To-Do List application showing a dark-themed interface with to-do items" loading="lazy" class="project-image">
-            <div class="project-content">
-              <h3 id="p3">AWS Scalable To-Do List App</h3>
-              <p>Production-ready full-stack serverless To-Do application with a React + TypeScript (Vite) frontend on S3 + CloudFront, AWS Lambda + API Gateway backend services, DynamoDB persistence, and Terraform-managed infrastructure.</p>
-              <div class="tech-stack">
-                <span class="pill">React</span>
-                <span class="pill">TypeScript</span>
-                <span class="pill">Vite</span>
-                <span class="pill">AWS Lambda</span>
-                <span class="pill">Amazon API Gateway</span>
-                <span class="pill">DynamoDB</span>
-                <span class="pill">AWS S3</span>
-                <span class="pill">CloudFront</span>
-                <span class="pill">Terraform</span>
-                <span class="pill">CloudWatch</span>
+          <article class="project-card glass border-gradient" data-reveal>
+            <div class="project-media">
+              <div class="project-accent accent-violet" aria-hidden="true"></div>
+              <img
+                src="images/spendguard-screenshot.png"
+                alt="SpendGuard dashboard screenshot"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-copy">
+              <p class="project-index">03 / Smart Expense and Budget Tracker</p>
+              <h3>SpendGuard</h3>
+              <p>
+                Full-stack serverless expense tracker with category budgets,
+                overspend alerts, receipt OCR, and AI-powered insights. It brings
+                together secure Cognito authentication, cloud workflows, and a
+                polished, product-grade user experience.
+              </p>
+              <div class="tag-list">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>AWS Amplify</span>
+                <span>Cognito</span>
+                <span>Lambda</span>
+                <span>DynamoDB</span>
+                <span>Textract</span>
+                <span>Bedrock</span>
               </div>
               <div class="project-actions">
-                <a class="btn" href="https://dnz0gkceadoio.cloudfront.net/" target="_blank" rel="noopener" aria-label="View AWS To-Do List App live">View Live</a>
-                <a class="btn btn-secondary" href="https://github.com/Kutlwano-Take/aws-scalable-todo-app" target="_blank" rel="noopener" aria-label="View AWS To-Do List App on GitHub">GitHub</a>
+                <a
+                  class="button button-solid"
+                  href="https://live.d23ix241s4yuzf.amplifyapp.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live demo
+                </a>
+                <a
+                  class="button button-glass"
+                  href="https://github.com/Kutlwano-Take/SpendGuard"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Source code
+                </a>
               </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section" aria-labelledby="contact-title">
+    <section id="skills" class="section">
       <div class="container">
-        <h2 id="contact-title">Contact</h2>
-        <p class="contact-intro">Got a project, opportunity, or just want to say hi? Fill out the form below.</p>
+        <div class="section-heading section-heading-stack" data-reveal>
+          <div>
+            <p class="eyebrow">Stack</p>
+            <h2>Tools of the <span class="text-gradient font-light">trade</span>.</h2>
+          </div>
+        </div>
 
-        <form action="https://formspree.io/f/xovokeqy" method="POST" class="contact-form">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your name" />
+        <div class="stack-grid">
+          <article class="stack-card glass border-gradient" data-reveal>
+            <p class="stack-index">01 - Frontend</p>
+            <ul class="stack-items">
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+              <li>JavaScript</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </article>
+
+          <article class="stack-card glass border-gradient" data-reveal>
+            <p class="stack-index">02 - Cloud and DevOps</p>
+            <ul class="stack-items">
+              <li>AWS Lambda</li>
+              <li>API Gateway</li>
+              <li>DynamoDB</li>
+              <li>S3 and CloudFront</li>
+              <li>Cognito</li>
+              <li>Terraform</li>
+              <li>Docker</li>
+            </ul>
+          </article>
+
+          <article class="stack-card glass border-gradient" data-reveal>
+            <p class="stack-index">03 - Backend and Data</p>
+            <ul class="stack-items">
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>Supabase</li>
+              <li>Athena</li>
+              <li>Glue</li>
+              <li>Pandas</li>
+              <li>REST APIs</li>
+            </ul>
+          </article>
+
+          <article class="stack-card glass border-gradient" data-reveal>
+            <p class="stack-index">04 - Tooling</p>
+            <ul class="stack-items">
+              <li>Git</li>
+              <li>GitHub Actions</li>
+              <li>CloudWatch</li>
+              <li>Vite</li>
+              <li>Render</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="cert-panel glass-strong" data-reveal>
+          <p class="eyebrow eyebrow-accent">Certifications</p>
+          <div class="cert-grid">
+            <div>AWS Certified Developer - Associate</div>
+            <div>AWS Cloud Practitioner Essentials</div>
+            <div>DevOps on AWS: Code, Build, Test</div>
+            <div>Containers with Docker, Kubernetes and OpenShift</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-heading" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2>
+            Engineer who actually
+            <span class="text-gradient font-light">ships</span>.
+          </h2>
+        </div>
+
+        <div class="about-copy" data-reveal>
+          <p>
+            I'm <span class="highlight-text">Kutlwano</span>, a Johannesburg-based
+            Full-Stack and Cloud Engineer focused on building secure, scalable
+            applications across AWS and modern web platforms.
+          </p>
+          <p>
+            I care about <span class="highlight-text">reliable deployments</span>,
+            clean architecture, and practical user-centered design. Whether it's
+            serverless backends, infrastructure as code, or a polished React UI,
+            I take ownership of the whole build.
+          </p>
+
+          <div class="stats-grid">
+            <article class="stat-card glass">
+              <strong>4+</strong>
+              <span>Production apps shipped</span>
+            </article>
+            <article class="stat-card glass">
+              <strong>AWS</strong>
+              <span>Certified Developer</span>
+            </article>
+            <article class="stat-card glass">
+              <strong>End-to-end</strong>
+              <span>Design to deploy</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-shell">
+        <div class="contact-card glass-strong border-gradient" data-reveal>
+          <div class="contact-glow contact-glow-primary" aria-hidden="true"></div>
+          <div class="contact-glow contact-glow-accent" aria-hidden="true"></div>
+
+          <div class="contact-content">
+            <p class="eyebrow eyebrow-accent">Let's build something</p>
+            <h2>
+              Have a role or<br />
+              a project?
+              <span class="text-gradient font-light"> Let's talk.</span>
+            </h2>
+            <p class="contact-text">
+              I'm currently open to full-time roles, contract work, and
+              meaningful collaborations across cloud, backend, and product
+              engineering.
+            </p>
+
+            <a class="email-cta" href="mailto:kutlwanotake@gmail.com">
+              <span>kutlwanotake@gmail.com</span>
+              <span aria-hidden="true">-></span>
+            </a>
+
+            <div class="social-links">
+              <a
+                href="https://github.com/Kutlwano-Take"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.41-4.04-1.41-.54-1.39-1.33-1.75-1.33-1.75-1.08-.75.08-.73.08-.73 1.2.08 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.91 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.59-2.81 5.61-5.49 5.91.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kutlwano-take-42229431b/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4.98 3.5A2.49 2.49 0 1 0 5 8.48 2.49 2.49 0 0 0 4.98 3.5ZM3 9h4v12H3Zm7 0h3.83v1.64h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.56c0-1.33-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4Z" />
+                </svg>
+              </a>
             </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="_replyto" required placeholder="you@example.com" />
-            </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required placeholder="What's this about?" />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required placeholder="Hey Kutlwano, I came across your portfolio and..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Send Message</button>
-
-          <p class="form-note mt-12 small muted-strong"></p>
-        </form>
+        <footer class="site-footer">
+          <p>&copy; <span id="year"></span> Kutlwano Take. Built with care.</p>
+          <p>Designed and engineered end to end.</p>
+        </footer>
       </div>
     </section>
   </main>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
+    ^
   </button>
-
-  <footer>
-    <div class="footer-content">
-      <div>&copy; <span id="year"></span> Kutlwano Take</div>
-      <div class="social-links">
-        <a href="https://github.com/Kutlwano-Take" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          <span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/kutlwano-take-42229431b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-          <span>LinkedIn</span>
-        </a>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
-

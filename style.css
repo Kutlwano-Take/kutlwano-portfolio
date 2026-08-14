@@ -561,6 +561,14 @@ textarea {
   object-position: center top;
 }
 
+/* Specific styling for OR Tambo image */
+.project-media img[src*="or-tambo-golf"] {
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+  height: 100%;
+}
+
 .project-accent {
   position: absolute;
   inset: 0;

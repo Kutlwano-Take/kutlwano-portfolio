@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kutlwano Take | Full-Stack & Cloud Engineer</title>
+  <title>Kutlwano Take | Full-Stack &amp; Cloud Engineer</title>
   <meta
     name="description"
     content="Kutlwano Take builds production-grade cloud applications with AWS serverless, React and TypeScript frontends, Terraform infrastructure, and Python analytics."
@@ -13,7 +13,7 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kutlwano-portfolio.vercel.app/" />
-  <meta property="og:title" content="Kutlwano Take | Full-Stack & Cloud Engineer" />
+  <meta property="og:title" content="Kutlwano Take | Full-Stack &amp; Cloud Engineer" />
   <meta
     property="og:description"
     content="Johannesburg-based engineer building secure, scalable web and cloud systems end to end."
@@ -22,47 +22,45 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://kutlwano-portfolio.vercel.app/" />
-  <meta name="twitter:title" content="Kutlwano Take | Full-Stack & Cloud Engineer" />
+  <meta name="twitter:title" content="Kutlwano Take | Full-Stack &amp; Cloud Engineer" />
   <meta
     name="twitter:description"
     content="Production-ready AWS, React, TypeScript, Terraform, and Python portfolio projects."
   />
   <meta name="twitter:image" content="https://kutlwano-portfolio.vercel.app/images/myprofile.jpeg" />
+  <meta name="theme-color" content="#0A0A0B" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Applies the saved theme before first paint so there is no flash of the wrong colours. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("kt-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
   <script src="javascript.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <div class="page-orb orb-left" aria-hidden="true"></div>
-  <div class="page-orb orb-right" aria-hidden="true"></div>
-  <div class="page-grid" aria-hidden="true"></div>
+  <div class="page-grain" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <nav class="nav-shell glass" aria-label="Primary navigation">
+    <nav class="nav-shell" aria-label="Primary navigation">
       <a class="brand" href="#hero" aria-label="Kutlwano Take home">
         <span class="brand-mark">KT</span>
         <span class="brand-name">Kutlwano Take</span>
+        <span class="brand-role">/ Cloud Eng</span>
       </a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-nav"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
 
       <ul class="nav-links" id="primary-nav">
         <li><a href="#projects">Work</a></li>
@@ -70,38 +68,66 @@
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+
+        <a class="button button-solid nav-cta" href="#contact">
+          Let's talk <span class="arrow" aria-hidden="true">&#8599;</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <main id="main-content" class="noise">
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
     <section id="hero" class="hero-section section">
+      <div class="hero-halo" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="availability-chip">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Available for opportunities</span>
+          <span class="divider" aria-hidden="true">|</span>
+          <span>Johannesburg, South Africa</span>
+        </div>
+
+        <h1 id="hero-title" class="hero-title">
+          <span class="line"><i>I build scalable</i></span>
+          <span class="line"><i>cloud applications</i></span>
+          <span class="line"><i>that <em>ship.</em></i></span>
+        </h1>
+      </div>
+
       <div class="container hero-layout">
-        <div class="hero-copy" data-reveal>
-          <div class="availability-chip glass">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span>Available for opportunities</span>
-            <span class="divider" aria-hidden="true">|</span>
-            <span>Johannesburg, South Africa</span>
-          </div>
-
-          <h1 id="hero-title" class="hero-title">
-            I build <span class="text-gradient font-light">scalable</span><br />
-            cloud applications<br />
-            <span class="hero-muted">that ship.</span>
-          </h1>
-
-          <p class="hero-summary">
-            Full-Stack &amp; Cloud Engineer crafting production-grade systems with
+        <div class="hero-copy">
+          <p class="hero-summary" data-reveal>
+            <strong>Full-Stack &amp; Cloud Engineer</strong> crafting production-grade systems with
             AWS serverless, React and TypeScript, Terraform infrastructure, and
             Python data workflows.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-actions" data-reveal>
             <a class="button button-solid" href="#projects">
               View selected work
-              <span aria-hidden="true">-></span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
-            <a class="button button-glass" href="#contact">Get in touch</a>
+            <a class="button button-ghost" href="#contact">Get in touch</a>
             <a
               class="button button-text"
               href="Kutlwano_Take_CV.pdf"
@@ -109,28 +135,54 @@
               rel="noreferrer"
             >
               Download CV
+              <span class="arrow-down" aria-hidden="true">&#8595;</span>
             </a>
           </div>
         </div>
 
         <div class="hero-profile" data-reveal>
-          <div class="profile-glow" aria-hidden="true"></div>
-          <img
-            src="images/myprofile.jpeg"
-            alt="Kutlwano Take, Full-Stack and Cloud Engineer"
-            class="profile-image"
-          />
-          <p class="profile-caption">Kutlwano Take</p>
+          <div class="profile-frame">
+            <img
+              src="images/myprofile.jpeg"
+              alt="Kutlwano Take, Full-Stack and Cloud Engineer"
+              class="profile-image"
+            />
+            <p class="profile-caption">Kutlwano Take</p>
+          </div>
+
+          <dl class="hero-meta">
+            <div class="meta-row">
+              <dt>Role</dt>
+              <dd>Full-Stack &amp; Cloud Engineer</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Based in</dt>
+              <dd>Johannesburg, ZA</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Local time</dt>
+              <dd id="local-time">&mdash;</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Focus</dt>
+              <dd>AWS &middot; Serverless &middot; IaC</dd>
+            </div>
+          </dl>
         </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track"></div>
       </div>
     </section>
 
-   <section id="projects" class="section">
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section">
       <div class="container">
         <div class="section-heading" data-reveal>
           <div>
             <p class="eyebrow">Selected work</p>
-            <h2>Things I've <span class="text-gradient font-light">shipped</span>.</h2>
+            <h2>Things I've <em>shipped</em>.</h2>
           </div>
           <p class="section-lead">
             A focused set of production builds across web applications, cloud platforms,
@@ -139,18 +191,23 @@
         </div>
 
         <div class="project-list">
-          <article class="project-card glass border-gradient" data-reveal>
+
+          <article class="project-card" data-reveal>
             <div class="project-media">
-              <div class="project-accent accent-amber" aria-hidden="true"></div>
+              <div class="browser-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <p>effiemsa.co.za</p>
+              </div>
               <img
                 src="images/election-sentinel.png"
                 alt="election-sentinel"
                 loading="lazy"
               />
             </div>
+
             <div class="project-copy">
               <p class="project-index">01 / Election Monitoring Platform</p>
-              <h3>EFF ELECTION MANAGEMENT PLATFORM </h3>
+              <h3>EFF ELECTION MANAGEMENT PLATFORM</h3>
               <p>
                 Real-time EFF election monitoring platform for South Africa built
                 with Angular 21 and Leaflet mapping. Features secure AWS
@@ -175,10 +232,10 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live demo
+                  Live demo <span class="arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a
-                  class="button button-glass"
+                  class="button button-ghost"
                   href="https://github.com/TshidiTech/election-sentinel"
                   target="_blank"
                   rel="noreferrer"
@@ -189,18 +246,22 @@
             </div>
           </article>
 
-          <article class="project-card glass border-gradient" data-reveal>
+          <article class="project-card" data-reveal>
             <div class="project-media">
-              <div class="project-accent accent-coral" aria-hidden="true"></div>
+              <div class="browser-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <p>or-tambo-golf.vercel.app</p>
+              </div>
               <img
                 src="images/or-tambo-golf.png"
                 alt="OR Tambo Client Portal and Booking Platform screenshot"
                 loading="lazy"
               />
             </div>
+
             <div class="project-copy">
-              <p class="project-index">02 / Client Portal & Booking Platform</p>
-              <h3>OR TAMBO CLIENT PORTAL & BOOKING PLATFORM </h3>
+              <p class="project-index">02 / Client Portal &amp; Booking Platform</p>
+              <h3>OR TAMBO CLIENT PORTAL &amp; BOOKING PLATFORM</h3>
               <p>
                 A modern client portal and booking platform for the Oliver Tambo Golf
                 Invitational. Built to provide a smooth experience for managing
@@ -223,10 +284,10 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live demo
+                  Live demo <span class="arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a
-                  class="button button-glass"
+                  class="button button-ghost"
                   href="https://github.com/TshidiTech/sjv-golf-reg-pro-45and"
                   target="_blank"
                   rel="noreferrer"
@@ -237,15 +298,19 @@
             </div>
           </article>
 
-          <article class="project-card glass border-gradient" data-reveal>
+          <article class="project-card" data-reveal>
             <div class="project-media">
-              <div class="project-accent accent-violet" aria-hidden="true"></div>
+              <div class="browser-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <p>tshidi-ai-invoice-tool.vercel.app</p>
+              </div>
               <img
                 src="images/tshidi-ai-invoice-tool.png"
                 alt="tshidi-ai-invoice-tool screenshot"
                 loading="lazy"
               />
             </div>
+
             <div class="project-copy">
               <p class="project-index">03 / AI-POWERED INVOICE BUSINESS PLATFORM</p>
               <h3>TshidiAI</h3>
@@ -272,10 +337,10 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live demo
+                  Live demo <span class="arrow" aria-hidden="true">&#8599;</span>
                 </a>
                 <a
-                  class="button button-glass"
+                  class="button button-ghost"
                   href="https://github.com/TshidiTech/tshidi-ai-invoice-tool"
                   target="_blank"
                   rel="noreferrer"
@@ -290,18 +355,18 @@
       </div>
     </section>
 
-
+    <!-- ==================== STACK ==================== -->
     <section id="skills" class="section">
       <div class="container">
         <div class="section-heading section-heading-stack" data-reveal>
           <div>
             <p class="eyebrow">Stack</p>
-            <h2>Tools of the <span class="text-gradient font-light">trade</span>.</h2>
+            <h2>Tools of the <em>trade</em>.</h2>
           </div>
         </div>
 
         <div class="stack-grid">
-          <article class="stack-card glass border-gradient" data-reveal>
+          <article class="stack-card" data-reveal>
             <p class="stack-index">01 - Frontend</p>
             <ul class="stack-items">
               <li>TypeScript</li>
@@ -318,7 +383,7 @@
             </ul>
           </article>
 
-          <article class="stack-card glass border-gradient" data-reveal>
+          <article class="stack-card" data-reveal>
             <p class="stack-index">02 - Cloud and DevOps</p>
             <ul class="stack-items">
               <li>AWS Lambda</li>
@@ -333,7 +398,7 @@
             </ul>
           </article>
 
-          <article class="stack-card glass border-gradient" data-reveal>
+          <article class="stack-card" data-reveal>
             <p class="stack-index">03 - Backend and Data</p>
             <ul class="stack-items">
               <li>Node.js</li>
@@ -346,7 +411,7 @@
             </ul>
           </article>
 
-          <article class="stack-card glass border-gradient" data-reveal>
+          <article class="stack-card" data-reveal>
             <p class="stack-index">04 - Tooling</p>
             <ul class="stack-items">
               <li>Git</li>
@@ -358,25 +423,26 @@
           </article>
         </div>
 
-        <div class="cert-panel glass-strong" data-reveal>
+        <div class="cert-panel" data-reveal>
           <p class="eyebrow eyebrow-accent">Certifications</p>
           <div class="cert-grid">
-            <div>AWS Certified Developer - Associate</div>
-            <div>AWS Cloud Practitioner Essentials</div>
-            <div>DevOps on AWS: Code, Build, Test</div>
-            <div>Containers with Docker, Kubernetes and OpenShift</div>
+            <div><span class="cert-check" aria-hidden="true"></span>AWS Certified Developer - Associate</div>
+            <div><span class="cert-check" aria-hidden="true"></span>AWS Cloud Practitioner Essentials</div>
+            <div><span class="cert-check" aria-hidden="true"></span>DevOps on AWS: Code, Build, Test</div>
+            <div><span class="cert-check" aria-hidden="true"></span>Containers with Docker, Kubernetes and OpenShift</div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ==================== ABOUT ==================== -->
     <section id="about" class="section">
       <div class="container about-grid">
         <div class="about-heading" data-reveal>
           <p class="eyebrow">About</p>
           <h2>
             Engineer who actually
-            <span class="text-gradient font-light">ships</span>.
+            <em>ships</em>.
           </h2>
         </div>
 
@@ -394,15 +460,15 @@
           </p>
 
           <div class="stats-grid">
-            <article class="stat-card glass">
+            <article class="stat-card">
               <strong>4+</strong>
               <span>Production apps shipped</span>
             </article>
-            <article class="stat-card glass">
+            <article class="stat-card">
               <strong>AWS</strong>
               <span>Certified Developer</span>
             </article>
-            <article class="stat-card glass">
+            <article class="stat-card">
               <strong>End-to-end</strong>
               <span>Design to deploy</span>
             </article>
@@ -411,18 +477,16 @@
       </div>
     </section>
 
+    <!-- ==================== CONTACT ==================== -->
     <section id="contact" class="section">
       <div class="container contact-shell">
-        <div class="contact-card glass-strong border-gradient" data-reveal>
-          <div class="contact-glow contact-glow-primary" aria-hidden="true"></div>
-          <div class="contact-glow contact-glow-accent" aria-hidden="true"></div>
-
+        <div class="contact-card" data-reveal>
           <div class="contact-content">
             <p class="eyebrow eyebrow-accent">Let's build something</p>
             <h2>
               Have a role or<br />
               a project?
-              <span class="text-gradient font-light"> Let's talk.</span>
+              <em>Let's talk.</em>
             </h2>
             <p class="contact-text">
               I'm currently open to full-time roles, contract work, and
@@ -431,8 +495,8 @@
             </p>
 
             <a class="email-cta" href="mailto:kutlwanotake@gmail.com">
-              <span>kutlwanotake@gmail.com</span>
-              <span aria-hidden="true">-></span>
+              <span>kutlwanotake@<wbr />gmail.com</span>
+              <span class="arrow" aria-hidden="true">&#8599;</span>
             </a>
 
             <div class="social-links">
@@ -456,6 +520,31 @@
                   <path d="M4.98 3.5A2.49 2.49 0 1 0 5 8.48 2.49 2.49 0 0 0 4.98 3.5ZM3 9h4v12H3Zm7 0h3.83v1.64h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.56c0-1.33-.02-3.05-1.86-3.05-1.87 0-2.16 1.46-2.16 2.96V21h-4Z" />
                 </svg>
               </a>
+              <a
+                href="Kutlwano_Take_CV.pdf"
+                download="Kutlwano_Take_CV.pdf"
+                rel="noreferrer"
+                aria-label="Download CV"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-meta">
+            <div>
+              <dt>Location</dt>
+              <dd>Johannesburg, South Africa</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:kutlwanotake@gmail.com">kutlwanotake@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Open to opportunities</dd>
             </div>
           </div>
         </div>
@@ -469,7 +558,9 @@
   </main>
 
   <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">
-    ^
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 20V5m0 0-6 6m6-6 6 6"/>
+    </svg>
   </button>
 </body>
 </html>

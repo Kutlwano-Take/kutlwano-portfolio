@@ -3,24 +3,96 @@
 
   document.documentElement.classList.add("js-enabled");
 
+  var root = document.documentElement;
   var yearEl = document.getElementById("year");
-  var header = document.querySelector(".nav-shell");
+  var timeEl = document.getElementById("local-time");
+  var siteHeader = document.querySelector(".site-header");
+  var navShell = document.querySelector(".nav-shell");
   var navToggle = document.querySelector(".nav-toggle");
+  var themeToggle = document.querySelector(".theme-toggle");
+  var marqueeTrack = document.getElementById("marquee-track");
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
   var backToTop = document.getElementById("back-to-top");
   var revealItems = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
   var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
 
+  /* ----------------------------------------------------------
+     Footer year
+     ---------------------------------------------------------- */
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  function setNavOpen(isOpen) {
-    if (!header || !navToggle) {
+  /* ----------------------------------------------------------
+     Local time in Johannesburg
+     ---------------------------------------------------------- */
+  function updateLocalTime() {
+    if (!timeEl) {
       return;
     }
 
-    header.classList.toggle("is-open", isOpen);
+    try {
+      timeEl.textContent = new Intl.DateTimeFormat("en-ZA", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+        timeZone: "Africa/Johannesburg"
+      }).format(new Date()) + " SAST";
+    } catch (e) {
+      timeEl.textContent = "Johannesburg";
+    }
+  }
+
+  updateLocalTime();
+  setInterval(updateLocalTime, 30000);
+
+  /* ----------------------------------------------------------
+     Theme toggle (preference persisted; applied pre-paint in <head>)
+     ---------------------------------------------------------- */
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute("content", next === "dark" ? "#0A0A0B" : "#F3F2EE");
+      }
+
+      try {
+        localStorage.setItem("kt-theme", next);
+      } catch (e) {
+        /* private mode — theme still applies for this visit */
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Tech marquee
+     ---------------------------------------------------------- */
+  if (marqueeTrack) {
+    var marqueeItems = [
+      "AWS Serverless", "Terraform", "TypeScript", "React", "Angular",
+      "Python", "DynamoDB", "Next.js", "Docker", "CI/CD", "Lambda", "Supabase"
+    ];
+
+    var markup = marqueeItems.map(function (item) {
+      return "<span>" + item + "</span>";
+    }).join("");
+
+    // duplicated so the -50% translate loops seamlessly
+    marqueeTrack.innerHTML = markup + markup;
+  }
+
+  /* ----------------------------------------------------------
+     Navigation
+     ---------------------------------------------------------- */
+  function setNavOpen(isOpen) {
+    if (!navShell || !navToggle) {
+      return;
+    }
+
+    navShell.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
   }
 
@@ -29,22 +101,18 @@
       return null;
     }
 
-    var firstChild = section.firstElementChild;
-    if (firstChild && firstChild.classList.contains("container")) {
-      return firstChild;
-    }
-
-    return section;
+    var firstChild = section.querySelector(":scope > .container");
+    return firstChild || section;
   }
 
   function getScrollPosition(section, targetId) {
-    if (targetId === "#hero") {
+    if (targetId === "#hero" || targetId === "#top") {
       return 0;
     }
 
     var contentTarget = getSectionContentTarget(section);
     var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-    var shellHeight = header ? header.offsetHeight : 0;
+    var shellHeight = navShell ? navShell.offsetHeight : 0;
     var safeTop = shellHeight + 24;
     var safeBottom = 32;
     var rect = contentTarget.getBoundingClientRect();
@@ -61,7 +129,7 @@
 
   if (navToggle) {
     navToggle.addEventListener("click", function () {
-      var isOpen = header ? !header.classList.contains("is-open") : false;
+      var isOpen = navShell ? !navShell.classList.contains("is-open") : false;
       setNavOpen(isOpen);
     });
   }
@@ -70,7 +138,7 @@
     var trigger = event.target.closest("a[href^='#']");
 
     if (!trigger) {
-      if (header && !event.target.closest(".nav-shell")) {
+      if (navShell && !event.target.closest(".nav-shell")) {
         setNavOpen(false);
       }
       return;
@@ -83,6 +151,11 @@
 
     var target = document.querySelector(targetId);
     if (!target) {
+      return;
+    }
+
+    // let the skip link behave natively so focus moves with it
+    if (trigger.classList.contains("skip-link")) {
       return;
     }
 
@@ -101,6 +174,7 @@
     navLinks.forEach(function (link) {
       var isActive = link.getAttribute("href") === activeHash;
       link.classList.toggle("is-active", isActive);
+
       if (isActive) {
         link.setAttribute("aria-current", "page");
       } else {
@@ -109,18 +183,25 @@
     });
   }
 
+  /* ----------------------------------------------------------
+     Scroll state
+     ---------------------------------------------------------- */
   function onScroll() {
     var scrolled = window.scrollY > 18;
 
-    if (header) {
-      header.classList.toggle("is-scrolled", scrolled);
+    if (siteHeader) {
+      siteHeader.classList.toggle("is-scrolled", scrolled);
+    }
+
+    if (navShell) {
+      navShell.classList.toggle("is-scrolled", scrolled);
     }
 
     if (backToTop) {
       backToTop.classList.toggle("is-visible", window.scrollY > 480);
     }
 
-    var offset = (header ? header.offsetHeight : 80) + 150;
+    var offset = (navShell ? navShell.offsetHeight : 80) + 150;
     var current = "#hero";
 
     sections.forEach(function (section) {
@@ -137,13 +218,13 @@
 
   if (backToTop) {
     backToTop.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
+  /* ----------------------------------------------------------
+     Scroll reveal
+     ---------------------------------------------------------- */
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

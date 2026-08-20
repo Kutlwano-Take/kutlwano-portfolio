@@ -487,6 +487,8 @@ html[data-theme="light"] .icon-moon { display: block; }
   color: var(--ink-faint);
 }
 .meta-row dd { font-size: 13px; text-align: right; }
+.meta-row dd a { transition: color 0.25s var(--ease); }
+.meta-row dd a:hover { color: var(--accent); }
 
 /* ------------------------------------------------------------
    7. MARQUEE
@@ -827,11 +829,12 @@ html[data-theme="light"] .icon-moon { display: block; }
   transform: translateY(-3px);
 }
 .social-links svg { width: 18px; height: 18px; fill: currentColor; }
-.social-links a:last-child svg { fill: none; }
+/* stroke-drawn icons (phone, CV) declare fill="none" inline */
+.social-links svg[fill="none"] { fill: none; }
 
 .contact-meta {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 18px;
   margin-top: clamp(34px, 4vw, 52px);
   padding-top: 28px;
@@ -962,7 +965,7 @@ html[data-theme="light"] .icon-moon { display: block; }
   .nav-cta { display: none; }
   .brand-name, .brand-role { display: none; }
 
-  .cert-grid, .contact-meta { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
   .site-footer { justify-content: flex-start; }
 }
 
